@@ -1,4 +1,4 @@
-import Decorator.Message;
+import Message.Message;
 import Observer.ChatRoom;
 import Observer.ChatWindow;
 

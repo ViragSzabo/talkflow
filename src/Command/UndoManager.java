@@ -3,7 +3,7 @@ package Command;
 import java.util.ArrayList;
 
 public class UndoManager {
-    private ArrayList<Command> commands;
+    private final ArrayList<Command> commands;
     public UndoManager() {
         commands = new ArrayList<>();
     }

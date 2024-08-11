@@ -1,6 +1,6 @@
 package FactoryMethod;
 
-import Decorator.Message;
+import Message.Message;
 
 public class TextMessageFactory extends MessageFactory {
 

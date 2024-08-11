@@ -1,6 +1,6 @@
 package FactoryMethod;
 
-import Decorator.Message;
+import Message.Message;
 
 public abstract class MessageFactory {
     public abstract Message createMessage();

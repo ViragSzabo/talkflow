@@ -1,5 +1,7 @@
 package Decorator;
 
+import Message.Message;
+
 public class EmojiDecorator extends MessageDecorator {
     public EmojiDecorator(Message message) {
         super(message);

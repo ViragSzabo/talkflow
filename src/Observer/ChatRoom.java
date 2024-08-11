@@ -1,6 +1,6 @@
 package Observer;
 
-import Decorator.Message;
+import Message.Message;
 
 import java.util.ArrayList;
 

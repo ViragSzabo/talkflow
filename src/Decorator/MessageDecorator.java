@@ -1,7 +1,9 @@
 package Decorator;
 
+import Message.Message;
+
 public abstract class MessageDecorator {
-    private Message message;
+    private final Message message;
     public MessageDecorator(Message message) {
         this.message = message;
     }

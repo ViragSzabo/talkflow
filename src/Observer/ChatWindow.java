@@ -1,9 +1,9 @@
 package Observer;
 
-import Decorator.Message;
+import Message.Message;
 
 public class ChatWindow implements Observer {
-    private String name;
+    private final String name;
 
     public ChatWindow(String name) {
         this.name = name;

@@ -1,10 +1,12 @@
-import Decorator.Message;
+package User;
 
-import java.text.MessageFormat;
+import Message.Message;
+import Mediator.ChatMediator;
 
 public class User {
     private String name;
     private String password;
+    private ChatMediator chatMediator;
     public User(String name, String password) {
         this.name = name;
         this.password = password;
@@ -21,11 +23,10 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    public void sendMessage(String content) {
-        new Message(content);
-        System.out.println("Decorator.Message sent.");
+    public void sendMessage(Message message) {
+        chatMediator.sendMessage(this, message);
     }
-    public void receiveMessage() {
-        System.out.println(MessageFormat.format("{0} received a message.", name));
+    public void receiveMessage(Message message) {
+        chatMediator.getMessages().getLast();
     }
 }

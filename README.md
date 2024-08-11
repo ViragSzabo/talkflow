@@ -11,7 +11,7 @@ Strategy Pattern: Provides various strategies for formatting messages (e.g., pla
 Command Pattern: Manages message operations (send, edit, delete) with undo/redo capabilities.
 Factory Method Pattern: Creates different types of messages (e.g., text, image).
 Mediator Pattern: Manages user interactions within chat rooms.
-Builder Pattern: Constructs complex message objects with attachments.
+Builder.Builder Pattern: Constructs complex message objects with attachments.
 
 ## Class Diagram
 Below is the simplified class diagram for the chat application:
@@ -27,12 +27,12 @@ Decorator Pattern for simple message features (e.g., emojis)
 Factory Method Pattern for message creation
 
 ### Should Have
-Decorator.Message Formatting using Strategy Pattern
+Message.Message Formatting using Strategy Pattern
 Mediator Pattern for managing user interactions
 Enhanced UI components
 
 ### Could Have
-Decorator.Message Builder for complex message creation
+Message.Message Builder.Builder for complex message creation
 Advanced Decorators (e.g., timestamping)
 Extended user management features
 
@@ -48,7 +48,7 @@ Integration with external services (e.g., third-party APIs)
 | **Date** | **Time Period** | **Activity**                       | **Details**                                            |
 |----------|-----------------|------------------------------------|--------------------------------------------------------|
 | **08.11** | **19:45 - 20:45** | **Planning and Design**            | Define requirements, draft class diagram, MoSCoW prioritization. |
-|          | **21:00 - 23:00** | **Setup and Initial Development**  | Set up IntelliJ IDEA, implement core classes (`Observer.ChatRoom`, `User`, `Decorator.Message`). |
+|          | **21:00 - 23:00** | **Setup and Initial Development**  | Set up IntelliJ IDEA, implement core classes (`Observer.ChatRoom`, `User.User`, `Message.Message`). |
 | **08.12** | **19:00 - 21:00** | **Implement Design Patterns**      | Implement Observer.Observer, Decorator, Command, Factory Method patterns. |
 |          | **21:00 - 22:00** | **Testing and Debugging**          | Conduct functional tests, debug issues.               |
 | **08.13** | **06:30 - 07:30** | **Finalization and Documentation** | Refine UI, finalize documentation, and review the test results. |
