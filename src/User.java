@@ -27,9 +27,3 @@ public class User {
         System.out.println(MessageFormat.format("{0} received a message.", name));
     }
 }
-
-public void main(String[] args) {
-    User user = new User("John", "12345");
-    user.sendMessage("Hi World");
-    user.receiveMessage();
-}
