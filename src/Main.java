@@ -1,21 +1,26 @@
+import Builder.Attachment;
+import Builder.MessageBuilder;
 import Message.Message;
-import Observer.ChatRoom;
-import Observer.ChatWindow;
 
 public class Main {
     public static void main(String[] args) {
-        // Create a chat room
-        ChatRoom chatRoom = new ChatRoom();
+        // Create a message with attachment
+        Attachment attachment = new Attachment("file.txt", new byte[] {1, 2, 3});
+        MessageBuilder builder = new MessageBuilder();
+        Message messageWithAttachment = builder
+                .setContent("Hello, world!")
+                .setAttachment(attachment)
+                .build();
 
-        // Create chat windows and register them as observers
-        ChatWindow window1 = new ChatWindow("Window 1");
-        ChatWindow window2 = new ChatWindow("Window 2");
+        System.out.println("Message: " + messageWithAttachment.getContent());
+        System.out.println("Attachment: " + messageWithAttachment.getAttachment().getFileName());
 
-        chatRoom.addObserver(window1);
-        chatRoom.addObserver(window2);
+        // Create a message without attachment
+        Message messageWithoutAttachment = builder
+                .setContent("Hello, world!")
+                .build();
 
-        // Add messages to the chat room
-        chatRoom.addMessage(new Message("Hello, world!"));
-        chatRoom.addMessage(new Message("How are you?"));
+        System.out.println("Message: " + messageWithoutAttachment.getContent());
+        System.out.println("Attachment: " + messageWithoutAttachment.getAttachment()); // Should be null
     }
 }
