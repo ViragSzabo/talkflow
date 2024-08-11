@@ -1,3 +1,7 @@
+package Observer;
+
+import Decorator.Message;
+
 import java.util.ArrayList;
 
 public class ChatRoom {

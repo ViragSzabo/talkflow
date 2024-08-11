@@ -1,3 +1,7 @@
+package Observer;
+
+import Decorator.Message;
+
 public class ChatWindow implements Observer {
     private String name;
 

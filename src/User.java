@@ -1,3 +1,5 @@
+import Decorator.Message;
+
 import java.text.MessageFormat;
 
 public class User {
@@ -21,7 +23,7 @@ public class User {
     }
     public void sendMessage(String content) {
         new Message(content);
-        System.out.println("Message sent.");
+        System.out.println("Decorator.Message sent.");
     }
     public void receiveMessage() {
         System.out.println(MessageFormat.format("{0} received a message.", name));

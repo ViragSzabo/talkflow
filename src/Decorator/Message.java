@@ -1,3 +1,5 @@
+package Decorator;
+
 public class Message {
     private final String content;
     public Message(String content) {

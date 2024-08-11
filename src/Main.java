@@ -1,3 +1,7 @@
+import Decorator.Message;
+import Observer.ChatRoom;
+import Observer.ChatWindow;
+
 public class Main {
     public static void main(String[] args) {
         // Create a chat room
