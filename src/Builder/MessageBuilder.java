@@ -19,6 +19,12 @@ public class MessageBuilder {
     }
 
     public Message build() {
-        return new Message(content, attachment);
+        if (content == null || content.isEmpty()) {
+            throw new IllegalArgumentException("Content cannot be null or empty");
+        }
+        Message message = new Message(content, attachment);
+        this.content = null;
+        this.attachment = null;
+        return message;
     }
 }

@@ -1,7 +1,7 @@
 package Builder;
 
 public class Attachment {
-    private String fileName;
+    private final String fileName;
     private final byte[] data;
 
     public Attachment(String fileName, byte[] data) {

@@ -29,10 +29,13 @@ public class ChatRoom {
         return observers;
     }
     public void notifyObservers() {
+        if (messages.isEmpty()) return;
         for (Observer observer : observers) {
-            if(!messages.isEmpty()) {
-                observer.update(messages.getLast());
+            Message lastMessage = messages.getLast();
+            if (lastMessage != null) {
+                observer.update(lastMessage);
             }
         }
     }
+
 }

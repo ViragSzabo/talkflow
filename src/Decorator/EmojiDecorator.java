@@ -8,7 +8,8 @@ public class EmojiDecorator extends MessageDecorator {
     }
 
     @Override
-    public void decorate(Message message) {
-        System.out.println(message);
+    public String getContent() {
+        // Add an emoji to the existing message content
+        return super.getContent() + " 😊";
     }
 }

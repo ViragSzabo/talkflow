@@ -1,13 +1,27 @@
 package Command;
 
+import Message.Message;
+
 public class EditCommand extends Command {
+    private final Message message;
+    private final String newContent;
+    private String oldContent;
+
+    public EditCommand(Message message, String newContent) {
+        this.message = message;
+        this.newContent = newContent;
+    }
+
     @Override
     public void execute() {
-        System.out.println("Edit Command");
+        oldContent = message.getContent();
+        message.setContent(newContent);
+        System.out.println(STR."Message edited: \{newContent}");
     }
 
     @Override
     public void undo() {
-        System.out.println("Undo Command");
+        message.setContent(oldContent);
+        System.out.println(STR."Undo edit: \{oldContent}");
     }
 }
